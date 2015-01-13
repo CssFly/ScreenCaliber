@@ -11,9 +11,9 @@ Author: Philipp Hennermann, www.cssfly.net/caliber
 
 Usage:
 
-1. Include Caliber.css and Caliber.js in your <head> section in development mode.
+1. Include Caliber.css and Caliber.js in your <head> section.
 2. You can now access and configure Caliber by clicking on the "C" button right top on your site.
-3. You may alter the SVG to get a GRID for your design or enter a URL of a screenshot
+3. You may alter the SVG to get a GRID for your design or enter a URL of a screenshot.
 
 Notice: Make shure to remove Caliber when going in production mode.
 
