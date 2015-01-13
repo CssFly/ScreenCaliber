@@ -10,7 +10,7 @@
  ** 2. You can now access and configure Caliber by clicking on the "C" button right top on your site.
  ** 3. You may alter the SVG to get a GRID for your design or enter a URL of a screenshot
  **
- ** License M.I.T. License, free for commercial use
+ ** License M.I.T. License
  */
 
 var Caliber = function(options)
