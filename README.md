@@ -9,6 +9,8 @@ http://www.cssfly.net/caliber
 CALIBER is a tool for Frontend-Development.
 It helps when developing HTML/CSS from a screenshot-reference and/or provides a flexible SVG grid for better orientation.
 
+Demo: http://www.cssfly.net/caliber/demo/
+
 Usage:
 
 1. Include Caliber.css and Caliber.js in your &lt;head&gt; section.
