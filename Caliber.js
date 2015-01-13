@@ -1,16 +1,14 @@
 /**
  ** CALIBER is a tool for Frontend-Development.
- ** Author: Philipp Hennermann, www.cssfly.net/caliber
- **
  ** It helps when publishing HTML/CSS from a screenshot and/or provides a flexible SVG grid for better orientation.
+ **
+ ** Author: Philipp Hennermann, www.cssfly.net/caliber
  **
  ** Usage:
  **
- ** 1. Include Caliber.css and Caliber.js in your <head> section in development mode.
+ ** 1. Include Caliber.css and Caliber.js in your <head> section.
  ** 2. You can now access and configure Caliber by clicking on the "C" button right top on your site.
  ** 3. You may alter the SVG to get a GRID for your design or enter a URL of a screenshot
- **
- ** Notice: Make shure to remove Caliber when going in production mode.
  **
  ** License M.I.T. License, free for commercial use
  */
@@ -18,7 +16,7 @@
 var Caliber = function(options)
 {
 	this.backgroundIdentifier 	 = options.backgroundIdentifier || 'body';
-	this.screenShotURL 		  	 = options.screenShotURL || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><g stroke="black">'+
+	this.screenShotURL 		 = options.screenShotURL || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><g stroke="black">'+
 								   '<line x1="0" y1="0" x2="10" y2="0" stroke-width="1" stroke-opacity="0.3" />'+
 								   '<line x1="0" y1="0" x2="0" y2="10" stroke-width="1" stroke-opacity="0.3" />'+
 								   '</g></svg>';
@@ -26,9 +24,9 @@ var Caliber = function(options)
 	this.screenShotRepeat 	  	 = options.screenShotRepeat || 'repeat';
 	this.screenShotSize 	  	 = options.screenShotSize || '';
 	this.screenShotOpacity 	  	 = options.screenShotOpacity || 0.5;
-	this.screenShotLayerPosition = options.screenShotLayerPosition || 'top';
-	this.isActive 				 = options.isActive || false;
-	this.isVisible  			 = options.isVisible || false;
+	this.screenShotLayerPosition 	 = options.screenShotLayerPosition || 'top';
+	this.isActive 			 = options.isActive || false;
+	this.isVisible  		 = options.isVisible || false;
 
 	this.__initUI();
 };
