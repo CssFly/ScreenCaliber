@@ -4,6 +4,7 @@
  **
  ** Author: Philipp Hennermann, www.cssfly.net/caliber
  ** GitHub: https://github.com/corpirate/CssFly-Caliber
+ **
  ** Usage:
  **
  ** 1. Include Caliber.css and Caliber.js in your <head> section.
@@ -143,7 +144,7 @@ Caliber.prototype.__updateBackground = function()
     container.style.width = bg.offsetWidth + 'px';
     container.style.height = bg.offsetHeight + 'px';
     container.style.opacity = this.screenShotOpacity;
-    
+
     bg.appendChild(container);
 
     style(container);
@@ -151,6 +152,7 @@ Caliber.prototype.__updateBackground = function()
   }
   style(bg);
 };
+
 Caliber.prototype.__pickColor = function()
 {
   var oldPos, oldOpacity, scope = this;
@@ -172,7 +174,7 @@ Caliber.prototype.__pickColor = function()
     {
       scope.screenShotLayerPosition = oldPos;
     }
-    this.screenShotOpacity = oldOpacity;
+    scope.screenShotOpacity = oldOpacity;
     scope.__updateBackground();
   }
 };
