@@ -3,7 +3,7 @@
  ** It helps when publishing HTML/CSS from a screenshot and/or provides a flexible SVG grid for better orientation.
  **
  ** Author: Philipp Hennermann, www.cssfly.net/caliber
- **
+ ** GitHub: https://github.com/corpirate/CssFly-Caliber
  ** Usage:
  **
  ** 1. Include Caliber.css and Caliber.js in your <head> section.
