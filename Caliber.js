@@ -15,17 +15,18 @@
 
 var Caliber = function(options)
 {
-  this.backgroundIdentifier 	 = options.backgroundIdentifier || 'body';
-  this.screenShotURL 		 = options.screenShotURL || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><g stroke="black">'+
-								   '<line x1="0" y1="0" x2="10" y2="0" stroke-width="1" stroke-opacity="0.3" />'+
-								   '<line x1="0" y1="0" x2="0" y2="10" stroke-width="1" stroke-opacity="0.3" />'+
-								   '</g></svg>';
-  this.screenShotPosition   	 = options.screenShotPosition || {'x': 0, 'y': 0};
-  this.screenShotRepeat 	 = options.screenShotRepeat || 'repeat';
-  this.screenShotOpacity 	 = options.screenShotOpacity || 0.5;
-  this.screenShotLayerPosition 	 = options.screenShotLayerPosition || 'top';
-  this.isActive 	         = options.isActive || false;
-  this.isVisible  		 = options.isVisible || false;
+  this.backgroundIdentifier    = options.backgroundIdentifier || 'body';
+  this.screenShotURL           = options.screenShotURL ||
+  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><g stroke="black">'+
+  '<line x1="0" y1="0" x2="10" y2="0" stroke-width="1" stroke-opacity="0.3" />'+
+  '<line x1="0" y1="0" x2="0" y2="10" stroke-width="1" stroke-opacity="0.3" />'+
+  '</g></svg>';
+  this.screenShotPosition      = options.screenShotPosition || {'x': 0, 'y': 0};
+  this.screenShotRepeat        = options.screenShotRepeat || 'repeat';
+  this.screenShotOpacity       = options.screenShotOpacity || 0.5;
+  this.screenShotLayerPosition = options.screenShotLayerPosition || 'top';
+  this.isActive                = options.isActive || false;
+  this.isVisible               = options.isVisible || false;
 
   this.__initUI();
 };
@@ -40,7 +41,7 @@ Caliber.prototype.__createUserInterface = function()
   layerSelected_1 = this.screenShotLayerPosition === 'top' ? 'selected="selected" selected' : '',
   layerSelected_2 = this.screenShotLayerPosition === 'bottom' ? 'selected="selected" selected' : '',
   isvisible = this.isVisible === true ? 'cssfly-caliber--visible' : '';
-  
+
   return html = '<div class="cssfly"><a title="Toggle Caliber Settings" class="cssfly__button-toggle" id="cssfly-toggle">C<span class="cssfly__button-toggle__extended">aliber</span></a>\n'+
   '<div class="cssfly-caliber '+isvisible+'" id="cssfly-caliber">\n'+
   '	<div class="cssfly-caliber__row cssfly-caliber__row--first">\n'+
