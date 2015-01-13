@@ -22,7 +22,6 @@ var Caliber = function(options)
 								   '</g></svg>';
   this.screenShotPosition   	 = options.screenShotPosition || {'x': 0, 'y': 0};
   this.screenShotRepeat 	 = options.screenShotRepeat || 'repeat';
-  this.screenShotSize 	  	 = options.screenShotSize || '';
   this.screenShotOpacity 	 = options.screenShotOpacity || 0.5;
   this.screenShotLayerPosition 	 = options.screenShotLayerPosition || 'top';
   this.isActive 	         = options.isActive || false;
