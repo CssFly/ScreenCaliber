@@ -12,7 +12,7 @@
  ** 3. You may alter the SVG to get a GRID for your design or enter a URL of a screenshot
  **
  ** License M.I.T. License
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
  * TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
  * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
@@ -52,32 +52,32 @@ Caliber.prototype.__createUserInterface = function()
 
     return '<div class="cssfly"><a title="Toggle Caliber Settings" class="cssfly__button-toggle" id="cssfly-toggle">C<span class="cssfly__button-toggle__extended">aliber</span></a>\n'+
         '<div class="cssfly-caliber '+isvisible+'" id="cssfly-caliber">\n'+
-        '	<div class="cssfly-caliber__row cssfly-caliber__row--first">\n'+
-        '		<label title="Background-Identifier (e.g. body, .someClass, #someId)" class="cssfly-caliber__label">'+
+        ' <div class="cssfly-caliber__row cssfly-caliber__row--first">\n'+
+        '   <label title="Background-Identifier (e.g. body, .someClass, #someId)" class="cssfly-caliber__label">'+
         'Root-Element: <input id="cssfly-backgroundIdentifier" class="cssfly-caliber__input cssfly-caliber__input--backgroundID" '+
         'type="text" placeholder="'+this.backgroundIdentifier+'" value="'+this.backgroundIdentifier+'" /></label></div><div class="cssfly-caliber__row">\n'+
-        '		<label title="Screenshot-URL - the URL to your Screenshot. You may use data-URLs too." class="cssfly-caliber__label">Screenshot-URL: '+
+        '   <label title="Screenshot-URL - the URL to your Screenshot. You may use data-URLs too." class="cssfly-caliber__label">Screenshot-URL: '+
         '<textarea id="cssfly-screenShotURL" class="cssfly-caliber__input cssfly-caliber__input--screenshotURL" '+
         'type="text" placeholder="'+this.screenShotURL.replace(/"/g, '')+'">'+this.screenShotURL.replace(/"/g, '&quot;')+
         '</textarea></label></div><div class="cssfly-caliber__row">\n'+
-        '		<label title="Screenshot Opacity (only if Layerposition is set to top)" class="cssfly-caliber__label">'+
+        '   <label title="Screenshot Opacity (only if Layerposition is set to top)" class="cssfly-caliber__label">'+
         'Screenshot-Opacity: <input id="cssfly-opacity" maxlength="3" class="cssfly-caliber__input cssfly-caliber__input--opacity" '+
         'type="text" placeholder="'+this.screenShotOpacity+'" value="'+this.screenShotOpacity+'" /></label></div><div class="cssfly-caliber__row cssfly-caliber__row--position">\n'+
-        '		<label title="X-Coordinate" class="cssfly-caliber__label">X-Position: <input id="cssfly-position-x" maxlength="8" '+
+        '   <label title="X-Coordinate" class="cssfly-caliber__label">X-Position: <input id="cssfly-position-x" maxlength="8" '+
         'class="cssfly-caliber__input cssfly-caliber__input--position-x" '+
         'type="text" placeholder="'+this.screenShotPosition.x+'" value="'+this.screenShotPosition.x+'" /></label></div><div class="cssfly-caliber__row cssfly-caliber__row--position">\n'+
-        '		<label title="Y-Coordinate" class="cssfly-caliber__label">Y-Position: <input id="cssfly-position-y" maxlength="8" '+
+        '   <label title="Y-Coordinate" class="cssfly-caliber__label">Y-Position: <input id="cssfly-position-y" maxlength="8" '+
         'class="cssfly-caliber__input cssfly-caliber__input--position-y" '+
         'type="text" placeholder="'+this.screenShotPosition.y+'" value="'+this.screenShotPosition.y+'" /></label></div><div class="cssfly-caliber__row cssfly-caliber__row--select">\n'+
-        '	<label class="cssfly-caliber__label">Layer:<select title="Send Screenshot to Top or Bottom Layer" size="1" class="cssfly-caliber__select" id="cssfly-layer-position">\n'+
+        ' <label class="cssfly-caliber__label">Layer:<select title="Send Screenshot to Top or Bottom Layer" size="1" class="cssfly-caliber__select" id="cssfly-layer-position">\n'+
         '<option value="top" '+layerSelected_1+'>Top</option><option value="bottom" '+layerSelected_2+'>Bottom</option></select></label>\n'+
-        '	</div>\n<div class="cssfly-caliber__row cssfly-caliber__row--select">\n'+
-        '	<label class="cssfly-caliber__label">Repeat:<select title="Backgound-repeat" size="1" class="cssfly-caliber__select" id="cssfly-bg-repeat">\n'+
+        ' </div>\n<div class="cssfly-caliber__row cssfly-caliber__row--select">\n'+
+        ' <label class="cssfly-caliber__label">Repeat:<select title="Backgound-repeat" size="1" class="cssfly-caliber__select" id="cssfly-bg-repeat">\n'+
         '<option value="no-repeat" '+bgRepeatSelected_1+'>No-Repeat</option><option value="repeat" '+bgRepeatSelected_2+'>Repeat</option><option value="repeat-x" '+bgRepeatSelected_3+'>Repeat-X</option>'+
         '<option value="repeat-y" '+bgRepeatSelected_4+'>Repeat-Y</option></select></label>\n'+
-        '	</div><div class="cssfly-caliber__row cssfly-caliber__row--select"><div class="cssfly-picker"><span class="cssfly-picker__button" id="cssfly-picker__button"></span>'+
+        ' </div><div class="cssfly-caliber__row cssfly-caliber__row--select"><div class="cssfly-picker"><span class="cssfly-picker__button" id="cssfly-picker__button"></span>'+
         '<input readonly="readonly" id="cssfly-picker__value" class="cssfly-picker__value" /></div>\n'+
-        '	</div><div class="cssfly-caliber__row cssfly-caliber__row--select"><label class="cssfly-caliber__label"><input type="checkbox" '+
+        ' </div><div class="cssfly-caliber__row cssfly-caliber__row--select"><label class="cssfly-caliber__label"><input type="checkbox" '+
         'class="cssfly-caliber__checkbox" id="cssfly-active" value="active" '+ischecked+' /> Apply</label>'+
         '</div>\n'+
         '</div></div>';
@@ -130,7 +130,7 @@ Caliber.prototype.__updateBackground = function()
 
     function style(el)
     {
-        el.style.backgroundImage = 'url(\'' + scope.screenShotURL + '\')';
+        el.style.backgroundImage = 'url(\'' + scope.__trim(scope.screenShotURL) + '\')';
         el.style.backgroundRepeat = scope.screenShotRepeat;
         el.style.backgroundPosition = scope.screenShotPosition + 'px,' + scope.screenShotPosition + 'px';
     }
@@ -284,7 +284,7 @@ Caliber.prototype.__initEvents = function()
     }, false);
 
     this.inputScreenShotURL.addEventListener('keyup', function(e){
-        scope.screenShotURL = this.value;
+        scope.screenShotURL = scope.__trim(this.value);
         scope.__updateBackground();
     }, false);
 
@@ -316,6 +316,11 @@ Caliber.prototype.__initEvents = function()
     this.colorPicker.addEventListener('click', function(e){
         scope.__pickColor();
     }, false);
+};
+
+Caliber.prototype.__trim = function(str)
+{
+  return str.replace(/\n/g, '');
 };
 
 Caliber.prototype.__getBackgroundElement = function()
