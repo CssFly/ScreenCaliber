@@ -8,13 +8,25 @@
       body{ color: #000; background:#efefef; }
       .text {
         background: none repeat scroll 0 0 #fe0;
-	float: left;
-	height: 290px;
-	margin: 10px;
-	padding: 50px;
-	width: 400px;
+  float: left;
+  height: 290px;
+  margin: 10px;
+  padding: 50px;
+  width: 400px;
       }
       #moretext { clear: left; background:#ccc; }
+
+      .cssfly-caliber {
+        min-height: 200px;
+       }
+       .cssfly-caliber__input--screenshotURL {
+         min-height: 100px;
+         overflow: auto;
+         min-width: 80%;
+         position: absolute;
+         left: 70px;
+         top: 70px;
+       }
     </style>
   </head>
   <body>
@@ -28,10 +40,21 @@ Praesent sed fermentum felis. Ut lobortis nulla sollicitudin nisl faucibus matti
     <div id="moretext">Nullam gravida velit turpis, porta consequat tortor pellentesque posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget purus eu lorem aliquam interdum. Curabitur massa massa, semper sed condimentum vel, dignissim et arcu. Duis nec metus mattis lacus pellentesque lacinia. Vivamus id ex tristique, varius augue ut, fringilla ipsum. Donec metus sapien, aliquam a bibendum sed, scelerisque et arcu. Donec nec libero eget nunc tempus blandit. Nulla facilisis pretium vulputate.</div>
     <script type="text/javascript" src="Caliber.js"></script>
     <script>
-      var init = new Caliber(
-      {
-        "isActive": true,
-        "isVisible": true
+        var svgGrid = 'data:image/svg+xml;utf8,\n'+
+                      '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">\n'+
+                      '  <g stroke="black" stroke-width="1">\n'+
+                      '    <line x1="0" y1="100" x2="100" y2="100" stroke-opacity="0.8" />\n'+
+                      '    <line x1="0" y1="50" x2="100" y2="50" stroke-opacity="0.1" />\n'+
+                      '    <line x1="100" y1="0" x2="100" y2="100" stroke-opacity="0.8" />\n'+
+                      '    <line x1="50" y1="0" x2="50" y2="100" stroke-opacity="0.1" />\n'+
+                      '  </g>\n'+
+                      '</svg>\n';
+
+        var init = new Caliber(
+        {
+          "isActive": true,
+          "isVisible": true,
+          "screenShotURL": svgGrid
       });
     </script>
   </body>
