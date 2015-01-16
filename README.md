@@ -1,8 +1,3 @@
-# CssFly
-http://www.cssfly.net
-
-Tools for WebDevelopment
-
 # Caliber
 http://www.cssfly.net/caliber
 
