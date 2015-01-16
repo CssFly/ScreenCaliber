@@ -12,4 +12,4 @@ Usage:
 3. You may alter the SVG to adapt the grid to your design or enter a URL of a screenshot.
 4. Configure initial setup of Caliber by passing options (e.g. ScreenShotURL) to the constructor per page.
 
-License M.I.T. License
+License: M.I.T.
