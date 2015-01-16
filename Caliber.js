@@ -2,7 +2,7 @@
  ** CALIBER is a tool for Frontend-Development.
  ** It helps when publishing HTML/CSS from a screenshot and/or provides a flexible SVG grid for better orientation.
  **
- ** Author: Philipp Hennermann, www.cssfly.net/caliber
+ ** Author: (c) Philipp Hennermann, www.cssfly.net/caliber
  ** GitHub: https://github.com/corpirate/CssFly-Caliber
  **
  ** Usage:
@@ -12,6 +12,12 @@
  ** 3. You may alter the SVG to get a GRID for your design or enter a URL of a screenshot
  **
  ** License M.I.T. License
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+ * TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+ * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ * DEALINGS IN THE SOFTWARE.
  */
 
 var Caliber = function(options)
