@@ -1,6 +1,9 @@
 # Caliber
 Download: http://www.cssfly.net/caliber
-Demo: http://www.cssfly.net/caliber/demo/
+
+Screenshot-Demo: http://www.cssfly.net/caliber/demo/
+
+SvgGrid-demo: http://www.cssfly.net/caliber/demo/example.html
 
 CALIBER is a small tool for Frontend-Development.
 It helps when developing HTML/CSS from a screenshot-reference and/or provides a flexible SVG grid for better orientation.
