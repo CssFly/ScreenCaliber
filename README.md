@@ -1,5 +1,5 @@
 # Caliber
-Download: http://www.cssfly.net/caliber
+Download: https://github.com/CssFly/Caliber/archive/master.zip
 
 Screenshot-Demo: http://www.cssfly.net/caliber/demo/
 
