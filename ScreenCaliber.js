@@ -1,14 +1,14 @@
 /**
- ** CALIBER is a tool for Frontend-Development.
+ ** SCREENCALIBER is a tool for Frontend-Development.
  ** It helps when publishing HTML/CSS from a screenshot and/or provides a flexible SVG grid for better orientation.
  **
- ** Author: (c) Philipp Hennermann, www.cssfly.net/caliber
- ** GitHub: https://github.com/CssFly/Caliber
+ ** Author: (c) Philipp Hennermann, www.cssfly.net/screencaliber
+ ** GitHub: https://github.com/CssFly/ScreenCaliber
  **
  ** Usage:
  **
- ** 1. Include Caliber.css and Caliber.js in your <head> section.
- ** 2. You can now access and configure Caliber by clicking on the "C" button right top on your site.
+ ** 1. Include ScreenCaliber.css and ScreenCaliber.js in your <head> section.
+ ** 2. You can now access and configure ScreenCaliber by clicking on the "C" button right top on your site.
  ** 3. You may alter the SVG to get a GRID for your design or enter a URL of a screenshot
  **
  ** License M.I.T. License
@@ -20,7 +20,7 @@
  * DEALINGS IN THE SOFTWARE.
  */
 
-var Caliber = function(options)
+var ScreenCaliber = function(options)
 {
     this.backgroundIdentifier    = options.backgroundIdentifier || 'body';
     this.screenShotURL           = options.screenShotURL ||
@@ -39,7 +39,7 @@ var Caliber = function(options)
     this.__initUI();
 };
 
-Caliber.prototype.__createUserInterface = function()
+ScreenCaliber.prototype.__createUserInterface = function()
 {
     var ischecked = this.isActive ? 'checked="checked"' : '',
         bgRepeatSelected_1 = this.screenShotRepeat === 'no-repeat' ? 'selected="selected" selected' : '',
@@ -83,7 +83,7 @@ Caliber.prototype.__createUserInterface = function()
         '</div></div>';
 };
 
-Caliber.prototype.__initUI = function()
+ScreenCaliber.prototype.__initUI = function()
 {
     var div, el, html = this.__createUserInterface(), scope = this;
 
@@ -114,12 +114,12 @@ Caliber.prototype.__initUI = function()
     this.__initEvents();
     this.__updateBackground();
 };
-Caliber.prototype.__toggle = function()
+ScreenCaliber.prototype.__toggle = function()
 {
     this.caliberBox.classList.toggle('cssfly-caliber--visible');
 };
 
-Caliber.prototype.__updateBackground = function()
+ScreenCaliber.prototype.__updateBackground = function()
 {
     var scope = this,
         bg = this.__getBackgroundElement(),
@@ -163,7 +163,7 @@ Caliber.prototype.__updateBackground = function()
     style(bg);
 };
 
-Caliber.prototype.__pickColor = function()
+ScreenCaliber.prototype.__pickColor = function()
 {
     var oldPos, oldOpacity, scope = this;
 
@@ -188,7 +188,7 @@ Caliber.prototype.__pickColor = function()
     scope.__picker(endPicker);
 };
 
-Caliber.prototype.__picker = function(endPicker)
+ScreenCaliber.prototype.__picker = function(endPicker)
 {
     var scope = this, canvas = document.createElement('canvas'),
         ctx, img = new window.Image(),
@@ -259,7 +259,7 @@ Caliber.prototype.__picker = function(endPicker)
     img.src = this.screenShotURL;
 };
 
-Caliber.prototype.__initEvents = function()
+ScreenCaliber.prototype.__initEvents = function()
 {
     var scope = this;
 
@@ -318,12 +318,12 @@ Caliber.prototype.__initEvents = function()
     }, false);
 };
 
-Caliber.prototype.__trim = function(str)
+ScreenCaliber.prototype.__trim = function(str)
 {
   return str.replace(/\n/g, '');
 };
 
-Caliber.prototype.__getBackgroundElement = function()
+ScreenCaliber.prototype.__getBackgroundElement = function()
 {
     try
     {
