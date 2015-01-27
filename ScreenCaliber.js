@@ -1,6 +1,6 @@
 /**
  ** SCREENCALIBER is a tool for Frontend-Development.
- ** It helps when publishing HTML/CSS from a screenshot and/or provides a flexible SVG grid for better orientation.
+ ** It helps when developing HTML/CSS from a screenshot and/or provides a flexible SVG grid for better orientation.
  **
  ** Author: (c) Philipp Hennermann, www.cssfly.net/screencaliber
  ** GitHub: https://github.com/CssFly/ScreenCaliber
