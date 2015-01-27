@@ -114,6 +114,7 @@ ScreenCaliber.prototype.__initUI = function()
     this.__initEvents();
     this.__updateBackground();
 };
+
 ScreenCaliber.prototype.__toggle = function()
 {
     this.caliberBox.classList.toggle('cssfly-caliber--visible');
@@ -134,7 +135,8 @@ ScreenCaliber.prototype.__updateBackground = function()
         el.style.backgroundRepeat = scope.screenShotRepeat;
         el.style.backgroundPosition = scope.screenShotPosition + 'px,' + scope.screenShotPosition + 'px';
     }
-    if(oldOverlay) {
+    if(oldOverlay)
+    {
         oldOverlay.parentNode.removeChild(oldOverlay);
     }
     bg.style = '';
@@ -196,11 +198,13 @@ ScreenCaliber.prototype.__picker = function(endPicker)
         overlay = document.getElementById('cssfly-overlay'),
         input = document.getElementById('cssfly-picker__value'), finish, onPick;
 
-    function componentToHex(c) {
+    function componentToHex(c)
+    {
         var hex = c.toString(16);
         return hex.length == 1 ? "0" + hex : hex;
     }
-    function rgbToHex(r, g, b) {
+    function rgbToHex(r, g, b)
+    {
         return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
     }
     function getMousePos(canvas, evt)
@@ -225,6 +229,14 @@ ScreenCaliber.prototype.__picker = function(endPicker)
             finish(e);
         }
     }
+    function pickAColor()
+    {
+        scope.colorPicker.style.backgroundPosition = '-100px 0';
+        overlay.className = 'cssfly-overlay--colorpicker';
+        overlay.addEventListener('mousemove', onMove, false);
+        overlay.addEventListener('click', onPick, false);
+    }
+
     finish = function(e)
     {
         overlay.removeEventListener('mousemove', onMove, false);
@@ -239,14 +251,6 @@ ScreenCaliber.prototype.__picker = function(endPicker)
     {
         finish(e);
     };
-
-    function pickAColor()
-    {
-        scope.colorPicker.style.backgroundPosition = '-100px 0';
-        overlay.className = 'cssfly-overlay--colorpicker';
-        overlay.addEventListener('mousemove', onMove, false);
-        overlay.addEventListener('click', onPick, false);
-    }
 
     img.onload = function()
     {
