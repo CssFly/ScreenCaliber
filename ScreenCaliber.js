@@ -29,7 +29,7 @@ var ScreenCaliber = function(options)
         '<line x1="0" y1="0" x2="0" y2="10" stroke-width="1" stroke-opacity="0.3" />'+
         '</g></svg>';
     this.screenShotPosition      = options.screenShotPosition || {'x': 0, 'y': 0};
-    this.screenShotRepeat        = options.screenShotRepeat || 'repeat';
+    this.screenShotRepeat        = options.screenShotRepeat || 'no-repeat';
     this.screenShotOpacity       = options.screenShotOpacity || 0.5;
     this.screenShotLayerPosition = options.screenShotLayerPosition || 'top';
     this.isActive                = options.isActive || false;
@@ -60,8 +60,8 @@ ScreenCaliber.prototype.__createUserInterface = function()
         '<textarea id="cssfly-screenShotURL" class="cssfly-caliber__input cssfly-caliber__input--screenshotURL" '+
         'type="text" placeholder="'+this.screenShotURL.replace(/"/g, '')+'">'+this.screenShotURL.replace(/"/g, '&quot;')+
         '</textarea></label></div><div class="cssfly-caliber__row">\n'+
-        '   <label title="Screenshot Opacity (only if Layerposition is set to top)" class="cssfly-caliber__label">'+
-        'Screenshot-Opacity: <input id="cssfly-opacity" maxlength="3" class="cssfly-caliber__input cssfly-caliber__input--opacity" '+
+        '   <label title="Opacity (only if Layerposition is set to top)" class="cssfly-caliber__label">'+
+        'Opacity: <input id="cssfly-opacity" maxlength="3" class="cssfly-caliber__input cssfly-caliber__input--opacity" '+
         'type="text" placeholder="'+this.screenShotOpacity+'" value="'+this.screenShotOpacity+'" /></label></div><div class="cssfly-caliber__row cssfly-caliber__row--position">\n'+
         '   <label title="X-Coordinate" class="cssfly-caliber__label">X-Position: <input id="cssfly-position-x" maxlength="8" '+
         'class="cssfly-caliber__input cssfly-caliber__input--position-x" '+
