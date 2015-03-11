@@ -13,8 +13,11 @@ Usage:
 1. Include ScreenCaliber Snippet before your closing &lt;/body&gt; tag.
 
 &lt;!--ScreenCaliber/--&gt;
+
 &lt;link type="text/css" rel="stylesheet" media="all" href="ScreenCaliber.css" /&gt;
+
 &lt;script type="text/javascript" src="ScreenCaliber.js">&lt;/script&gt;
+
 &lt;script&gt;
 	var init = new ScreenCaliber(
 	{
