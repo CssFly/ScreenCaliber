@@ -131,9 +131,10 @@ ScreenCaliber.prototype.__updateBackground = function()
 
     function style(el)
     {
+        var po = (scope.screenShotPosition.x) + 'px ' + (bg.offsetTop + scope.screenShotPosition.y) + 'px';
         el.style.backgroundImage = 'url(\'' + scope.__trim(scope.screenShotURL) + '\')';
         el.style.backgroundRepeat = scope.screenShotRepeat;
-        el.style.backgroundPosition = scope.screenShotPosition + 'px,' + scope.screenShotPosition + 'px';
+        el.style.backgroundPosition = po;
     }
     if(oldOverlay)
     {
