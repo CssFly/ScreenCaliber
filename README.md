@@ -19,16 +19,16 @@ Usage:
 &lt;script type="text/javascript" src="ScreenCaliber.js">&lt;/script&gt;
 
 &lt;script&gt;
-	var init = new ScreenCaliber(
-	{
-		"isActive": true,
-		"isVisible": true,
-		"screenShotURL": "myScreenShot.png", 	/* replace with your own */
-		"backgroundIdentifier": "body", 	/* tagname, classname or id */
-		"screenShotLayerPosition": "bottom", 	/* top or bottom */
-		"screenShotPosition": {"x":0, "y":0},
-		"screenShotOpacity": 1
-	});
+  var init = new ScreenCaliber(\n
+  {\n
+    "isActive": true,\n
+    "isVisible": true,\n
+    "screenShotURL": "myScreenShot.png", 	/* replace with your own */
+    "backgroundIdentifier": "body", 	/* tagname, classname or id */ 
+    "screenShotLayerPosition": "bottom", 	/* top or bottom */
+    "screenShotPosition": {"x":0, "y":0},
+    "screenShotOpacity": 1
+});
 &lt;/script&gt;
 &lt;!--/ScreenCaliber/--&gt;
 
