@@ -10,7 +10,7 @@ It helps when developing HTML/CSS from a screenshot-reference.
 I use ScreenCaliber in combination with Firebug.
 
 Usage:
-1. Include ScreenCaliber Snippet before your closing &lt;/body&gt; tag.
+Include ScreenCaliber Snippet before your closing &lt;/body&gt; tag:
 
 &lt;!--ScreenCaliber/--&gt;
 
@@ -42,7 +42,7 @@ Usage:
 
 &lt;!--/ScreenCaliber/--&gt;
 
-2. You can now access and configure ScreenCaliber by clicking on the "C" button right top on your site.
-3. As you can see above, you can configure initial setup of ScreenCaliber by passing options (e.g. ScreenShotURL) to the constructor.
+You can now access and configure ScreenCaliber by clicking on the "C" button right top on your site.
+As you can see above, you can configure initial setup of ScreenCaliber by passing options (e.g. ScreenShotURL) to the constructor.
 
 License: M.I.T.
