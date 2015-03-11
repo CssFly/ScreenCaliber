@@ -10,7 +10,7 @@ It helps when developing HTML/CSS from a screenshot-reference.
 I use ScreenCaliber in combination with Firebug.
 
 Usage:
-1. Include ScreenCaliber Snippet before your closing </body> tag.
+1. Include ScreenCaliber Snippet before your closing &lt;/body&gt; tag.
 
 &lt;!--ScreenCaliber/--&gt;
 &lt;link type="text/css" rel="stylesheet" media="all" href="ScreenCaliber.css" /&gt;
@@ -20,9 +20,9 @@ Usage:
 	{
 		"isActive": true,
 		"isVisible": true,
-		"screenShotURL": "myScreenShot.png", /* replace with your own */
-		"backgroundIdentifier": "body", /* tagname, classname or id */
-		"screenShotLayerPosition": "bottom", /* top or bottom */
+		"screenShotURL": "myScreenShot.png", 	/* replace with your own */
+		"backgroundIdentifier": "body", 	/* tagname, classname or id */
+		"screenShotLayerPosition": "bottom", 	/* top or bottom */
 		"screenShotPosition": {"x":0, "y":0},
 		"screenShotOpacity": 1
 	});
