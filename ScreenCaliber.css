@@ -1,15 +1,14 @@
 /**
-** CALIBER is a tool for Frontend-Development.
+** SCREENCALIBER is a tool for Frontend-Development.
 ** It helps when publishing HTML/CSS from a screenshot and/or provides a flexible SVG grid for better orientation.
 **
-** Author: (c) Philipp Hennermann, www.cssfly.net/caliber
-** GitHub: https://github.com/CssFly/Caliber
+** Author: (c) Philipp Hennermann, www.cssfly.net/screencaliber
+** GitHub: https://github.com/CssFly/ScreenCaliber
 **
 ** Usage:
 **
-** 1. Include Caliber.css and Caliber.js in your <head> section.
-** 2. You can now access and configure Caliber by clicking on the "C" button right top on your site.
-** 3. You may alter the SVG to get a GRID for your design or enter a URL of a screenshot
+** 1. Include ScreenCaliber.css and ScreenCaliber.js in your <head> section.
+** 2. You can now access and configure ScreenCaliber by clicking on the "C" button right top on your site.
 **
 ** License M.I.T. License
 *
@@ -19,9 +18,11 @@
 * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 * DEALINGS IN THE SOFTWARE.
 */
+
+
 .cssfly {
-  font-size: 13px !important;
-  font-family: Arial, sans-serif !important;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -67,15 +68,14 @@
   background-image: url("data:image/png;base64,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");
   background-position: 5px 5px;
   background-repeat: no-repeat;
-  box-shadow: 0 -4px 5px 3px rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.3);
   display: none;
   left: 0;
   line-height: 25px;
   margin: 0;
   padding: 0;
   position: fixed;
-  bottom: 0;
-  height: 70px;
   width: 100%;
   z-index: 2999;
 }
@@ -107,7 +107,6 @@
   font-size: 13px;
   padding: 5px;
   width: 120px;
-  line-height: 13px;
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
 }
 .cssfly-caliber__select {
