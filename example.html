@@ -1,64 +1,88 @@
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
-    <title>Caliber</title>
+    <title>Caliber - Demo Page</title>
+    <link rel="stylesheet" type="text/css" href="ScreenCaliber.css">
     <style type="text/css">
       body, html{ height: 100%; }
-      body{ color: #000; background:#efefef; }
-      .text {
-        background: none repeat scroll 0 0 #fe0;
+      body{ color: #000; background:#efefef;}
+      article {
+        background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
         float: left;
+        font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
         height: 290px;
-        margin: 10px;
-        padding: 50px;
-        width: 400px;
+        line-height: 1.6;
+        margin-right: 0;
+        margin-top: 72px;
+        padding: 18px 17px 18px 18px;
+        text-rendering: optimizelegibility;
+        width: 215px;
       }
-      #moretext { clear: left; background:#ccc; }
-      .cssfly-caliber {
-        min-height: 200px;
-       }
-      .cssfly-caliber__input--screenshotURL {
-       min-height: 100px;
-       overflow: auto;
-       min-width: 80%;
-       position: absolute;
-       left: 70px
-        top: 70px;
-       }
+      h3 {
+        font-size: 27px;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        margin-top: 6px;
+        padding: 0;
+      }
+      footer a {
+        background: none repeat scroll 0 0 #e7e7e7;
+        border-radius: 3px;
+        font-size: 11px;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 20px;
+        position: relative;
+        top: 6px;
+      }
     </style>
   </head>
-  <body>
-    <div class="text">
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet vulputate massa a tempus. Nullam non nibh enim. Fusce egestas orci arcu, nec luctus nibh fermentum a. In non luctus ligula. Donec tempus auctor convallis. Suspendisse iaculis ac diam et interdum. Nam condimentum arcu ex, id ultrices dui viverra a. Maecenas quis tortor ligula. Sed rutrum massa vel ullamcorper sagittis. Ut blandit dignissim dignissim. Cras tristique dictum nulla sit amet dictum. Quisque cursus maximus hendrerit. Praesent est nunc, tincidunt at scelerisque ac, vulputate lobortis lorem. Quisque lobortis tortor in feugiat ultricies.
-    </div><div class="text">
-Nullam gravida velit turpis, porta consequat tortor pellentesque posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget purus eu lorem aliquam interdum. Curabitur massa massa, semper sed condimentum vel, dignissim et arcu. Duis nec metus mattis lacus pellentesque lacinia. Vivamus id ex tristique, varius augue ut, fringilla ipsum. Donec metus sapien, aliquam a bibendum sed, scelerisque et arcu. Donec nec libero eget nunc tempus blandit. Nulla facilisis pretium vulputate.
-    </div><div class="text">
-Praesent sed fermentum felis. Ut lobortis nulla sollicitudin nisl faucibus mattis. Ut suscipit arcu vitae leo pellentesque gravida. Nulla facilisi. Praesent auctor placerat dolor nec eleifend. Donec a nunc vel mauris tincidunt dapibus pellentesque quis diam. Sed augue nibh, molestie ac maximus eget, varius et velit. Quisque non mattis ante. Aliquam bibendum sem quis est porttitor, vitae sagittis nibh vulputate. Fusce sagittis velit ipsum, sed mattis sem vehicula sit amet. Maecenas commodo condimentum nulla non bibendum. Nulla nec mattis diam, in laoreet dolor. Maecenas vitae ipsum placerat, lobortis ipsum congue, vulputate augue. Sed malesuada posuere lorem, sed pharetra felis rhoncus id. Vivamus et scelerisque massa. Fusce porttitor ipsum libero, quis feugiat libero finibus non. 
-    </div>
-    <div id="moretext">Nullam gravida velit turpis, porta consequat tortor pellentesque posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget purus eu lorem aliquam interdum. Curabitur massa massa, semper sed condimentum vel, dignissim et arcu. Duis nec metus mattis lacus pellentesque lacinia. Vivamus id ex tristique, varius augue ut, fringilla ipsum. Donec metus sapien, aliquam a bibendum sed, scelerisque et arcu. Donec nec libero eget nunc tempus blandit. Nulla facilisis pretium vulputate.</div>
-    
-    <!--ScreenCaliber/-->
-    <link rel="stylesheet" type="text/css" href="ScreenCaliber.css">
-    <script type="text/javascript" src="ScreenCaliber.js"></script>
-    <script>
-        var svgGrid = 'data:image/svg+xml;utf8,\n'+
-                      '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">\n'+
-                      '  <g stroke="black" stroke-width="1">\n'+
-                      '    <line x1="0" y1="100" x2="100" y2="100" stroke-opacity="0.8" />\n'+
-                      '    <line x1="0" y1="50" x2="100" y2="50" stroke-opacity="0.1" />\n'+
-                      '    <line x1="100" y1="0" x2="100" y2="100" stroke-opacity="0.8" />\n'+
-                      '    <line x1="50" y1="0" x2="50" y2="100" stroke-opacity="0.1" />\n'+
-                      '  </g>\n'+
-                      '</svg>\n';
 
-        var init = new ScreenCaliber(
-        {
-          "isActive": true,
-          "isVisible": true,
-          "screenShotURL": svgGrid
+  <body>
+
+<section>
+      <article>
+        <header><h3>Tools</h3></header>
+        <p>Well, we like to draw. On this site you can find different drawing tools for your pleasure. No matter if you prefer to draw <a>online</a> or <a>offline</a>, all tools are free to use!</p>
+        <footer><a>Learn more</a></footer>
+      </article>
+      <article>
+        <header><h3>Art</h3></header>
+        <p>Thousands of users have created tons of beautiful drawings using our tools. Explore our massive gallery and get in touch with the world of digital art.</p>
+        <footer><a>Top rated drawings</a></footer>
+      </article>
+      <article>
+        <header><h3>People</h3></header>
+        <p>Beside posting your art, you can create groups, journal posts and many more. Join a vivid community of people who like to draw and showcase their work.</p>
+        <footer><a>Top artists</a></footer>
+      </article>
+      <article>
+        <header><h3>Projects</h3></header>
+        <p>In our project-section you can join different projects about various topics. In some projects you can win prizes, others experiment with techniques and visual stuff.</p>
+        <footer><a>Projects &amp; Competitions</a></footer>
+      </article>
+    </section>
+
+  <script type="text/javascript" src="ScreenCaliber.js"></script>
+  <script>
+    var init = new ScreenCaliber(
+      {
+        "isActive": true,
+        "isVisible": true,
+        "screenShotURL": "http://www.cssfly.net/screencaliber/demo/queeky.png",
+        "backgroundIdentifier": "body",
+          "screenShotRepeat": "no-repeat",
+        "screenShotOpacity": 0.5,
+        "screenShotLayerPosition": "top"
       });
-    </script>
-    <!--/ScreenCaliber/-->
+  </script>
 
   </body>
+
 </html>
